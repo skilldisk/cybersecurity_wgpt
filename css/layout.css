@@ -1,3 +1,4 @@
+/* css */
 @charset "UTF-8";
 :root {
   --split-div-size: 0;
@@ -16,40 +17,112 @@ split[no-margin] > * {
   --r-block-margin: 0;
 }
 split[wrap="1"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (1 - 1))) - (calc(var(--dbg-size) * 1 * 2))) / 1);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (1 - 1))) -
+            (calc(var(--dbg-size) * 1 * 2))
+        ) / 1
+    );
 }
 split[wrap="2"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (2 - 1))) - (calc(var(--dbg-size) * 2 * 2))) / 2);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (2 - 1))) -
+            (calc(var(--dbg-size) * 2 * 2))
+        ) / 2
+    );
 }
 split[wrap="3"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (3 - 1))) - (calc(var(--dbg-size) * 3 * 2))) / 3);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (3 - 1))) -
+            (calc(var(--dbg-size) * 3 * 2))
+        ) / 3
+    );
 }
 split[wrap="4"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (4 - 1))) - (calc(var(--dbg-size) * 4 * 2))) / 4);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (4 - 1))) -
+            (calc(var(--dbg-size) * 4 * 2))
+        ) / 4
+    );
 }
 split[wrap="5"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (5 - 1))) - (calc(var(--dbg-size) * 5 * 2))) / 5);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (5 - 1))) -
+            (calc(var(--dbg-size) * 5 * 2))
+        ) / 5
+    );
 }
 split[wrap="6"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (6 - 1))) - (calc(var(--dbg-size) * 6 * 2))) / 6);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (6 - 1))) -
+            (calc(var(--dbg-size) * 6 * 2))
+        ) / 6
+    );
 }
 split[wrap="7"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (7 - 1))) - (calc(var(--dbg-size) * 7 * 2))) / 7);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (7 - 1))) -
+            (calc(var(--dbg-size) * 7 * 2))
+        ) / 7
+    );
 }
 split[wrap="8"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (8 - 1))) - (calc(var(--dbg-size) * 8 * 2))) / 8);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (8 - 1))) -
+            (calc(var(--dbg-size) * 8 * 2))
+        ) / 8
+    );
 }
 split[wrap="9"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (9 - 1))) - (calc(var(--dbg-size) * 9 * 2))) / 9);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (9 - 1))) -
+            (calc(var(--dbg-size) * 9 * 2))
+        ) / 9
+    );
 }
 split[wrap="10"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (10 - 1))) - (calc(var(--dbg-size) * 10 * 2))) / 10);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (10 - 1))) -
+            (calc(var(--dbg-size) * 10 * 2))
+        ) / 10
+    );
 }
 split[wrap="11"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (11 - 1))) - (calc(var(--dbg-size) * 11 * 2))) / 11);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (11 - 1))) -
+            (calc(var(--dbg-size) * 11 * 2))
+        ) / 11
+    );
 }
 split[wrap="12"] > * {
-  flex: 1 1 calc((100% - (calc(var(--split-gap-size) * (12 - 1))) - (calc(var(--dbg-size) * 12 * 2))) / 12);
+  flex: 1 1
+    calc(
+      (
+          100% - (calc(var(--split-gap-size) * (12 - 1))) -
+            (calc(var(--dbg-size) * 12 * 2))
+        ) / 12
+    );
 }
 split[gap="0"] {
   --split-gap-size: 0;
@@ -466,76 +539,40 @@ p.align-center {
   animation-fill-mode: both;
 }
 :root {
-  --callout-background-color:
-    255,
-    255,
-    255;
+  --callout-background-color: 255, 255, 255;
 }
 .callout-color1 {
-  --callout-color:
-    108,
-    192,
-    245;
+  --callout-color: 108, 192, 245;
 }
 .callout-color2 {
-  --callout-color:
-    109,
-    197,
-    217;
+  --callout-color: 109, 197, 217;
 }
 .callout-color3 {
-  --callout-color:
-    113,
-    208,
-    136;
+  --callout-color: 113, 208, 136;
 }
 .callout-color4 {
-  --callout-color:
-    160,
-    224,
-    107;
+  --callout-color: 160, 224, 107;
 }
 .callout-color5 {
-  --callout-color:
-    238,
-    177,
-    91;
+  --callout-color: 238, 177, 91;
 }
 .callout-color6 {
-  --callout-color:
-    234,
-    136,
-    133;
+  --callout-color: 234, 136, 133;
 }
 .callout-color7 {
-  --callout-color:
-    230,
-    98,
-    121;
+  --callout-color: 230, 98, 121;
 }
 .callout-color8 {
-  --callout-color:
-    152,
-    126,
-    243;
+  --callout-color: 152, 126, 243;
 }
 .callout-color9 {
-  --callout-color:
-    182,
-    182,
-    182;
+  --callout-color: 182, 182, 182;
 }
 .callout-color-default {
-  --callout-color:
-    129,
-    167,
-    244;
+  --callout-color: 129, 167, 244;
 }
 .has-light-background {
-  --callout-background-color:
-    160,
-    160,
-    160;
+  --callout-background-color: 160, 160, 160;
 }
 .callout {
   border-left: 4px solid rgb(var(--callout-color));
