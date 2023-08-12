@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/skillppt.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="https://raw.githubusercontent.com/skilldisk/static/main/images/sd/logo.png" alt="logo.png (1130×210) (raw.githubusercontent.com)" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Cyber Security Path way
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="position: absolute; left: 10%; top: 10%; height: 10%; width: 80%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+## Agenda 
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 10%; height: 80%; width: 80%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+
+- Why to choose Cyber Security ?
+- Myths about the course
+- What you will Learn ?
+- Job Opportunities
+- Is this Course for you ?
+- Queries
+</div>
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Why to choose Cyber Security ?
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Job Opportunities
+- Industrial Revolution 4.0
+- Data Privacy
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-image="http://cdn-images-1.medium.com/v2/resize:fit:1600/1*5rsnkCU5tBRrPoqVMEJWFw.jpeg" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="position: absolute; left: 0%; top: 75%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+# Industrial Revolution <!-- .element: style="color: #fa0; background-color: #fff" -->
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="SkillDisk/Clients/Polytechnic/WomensGPT/ppt/attachments/Pasted image 20230812090150.png" alt="" style="object-fit: scale-down">
+
+Modern Times <!-- .element: class="fragment" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="fragment" style="position: absolute; left: 10%; top: 10%; height: 35%; width: 35%; display: flex; flex-direction: column; align-items: center; justify-content: center" data-fragment-index="1">
+
+<img src="images/electric_car.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="fragment" style="position: absolute; left: 60%; top: 10%; height: 35%; width: 35%; display: flex; flex-direction: column; align-items: center; justify-content: center" data-fragment-index="3">
+
+<img src="images/cloud.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="fragment" style="position: absolute; left: 10%; top: 60%; height: 35%; width: 35%; display: flex; flex-direction: column; align-items: center; justify-content: center" data-fragment-index="4">
+
+<img src="images/iot_white.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="fragment" style="position: absolute; left: 60%; top: 60%; height: 35%; width: 35%; display: flex; flex-direction: column; align-items: center; justify-content: center" data-fragment-index="2">
+
+<img src="images/bike.png" alt="" style="object-fit: scale-down">
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Data Privacy
+</div>
+
+<aside class="notes"><p>: 
+In todays era of internet, we are selling our data to third party with or without our consent, with the use of cloud applications, smart devices and social media platforms etc.
+Does that mean, we are not supposed to use it. No, we need to learn how to protect our data. Our data, is it so important to protect it ?</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#  Which Tech Companies Do You Trust
+# ? <!-- .element: style="color: red" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- [Notifying Administrators About Unhashed Password Storage | Google Cloud Blog](https://cloud.google.com/blog/products/g-suite/notifying-administrators-about-unhashed-password-storage)
+- [Microsoft's ChatGPT in Windows OS Improves AI Experience](https://www.analyticsvidhya.com/blog/2023/04/microsoft-integrates-chatgpt-into-windows-os-for-enhanced-ai-experience/)
+- Whatsapp and Facebook ?
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="SkillDisk/Clients/Polytechnic/WomensGPT/ppt/attachments/Pasted image 20230812090733.png" alt="" style="object-fit: scale-down">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Era of Internet
+- Smart Devices
+- Cloud applications
+- Social Media Platforms
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Try it yourself ⚠
+</div>
+
+<aside class="notes"><p>:
+Telegram app demonstration.</p>
+</aside></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Myths about the course
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# ? <!-- .element: style="color: red" -->
+Can you hack my neighbors WiFi <!-- .element: style="font-size: 4rem" class="fragment" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Yes <!-- .element: style="color: red" class="fragment" -->
+# No <!-- .element: style="color: green" class="fragment" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# ? <!-- .element: style="color: red" -->
+Can you change my exam marks <!-- .element: style="font-size: 4rem" class="fragment" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 20, August 2013
+<img src="SkillDisk/Clients/Polytechnic/WomensGPT/ppt/attachments/Pasted image 20230812094520.png" alt="" style="object-fit: scale-down" class="fragment">
+
+[link 2013](https://bangaloremirror.indiatimes.com/bangalore/cover-story/vtu-a-tech-university-or-a-technologically-challenged-university/articleshow/22253636.cms) <!-- .element: class="fragment" -->
+
+[link 2017](https://bangaloremirror.indiatimes.com/bangalore/cover-story/visvesvaraya-technological-university-student-hacks-into-varsity-site-points-out-major-security-holes/articleshow/60916263.cms#:~:text=In%202013%2C%20Bangalore%20Mirror%20had,place%20in%20that%20particular%20year.) <!-- .element: class="fragment" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="SkillDisk/Clients/Polytechnic/WomensGPT/ppt/attachments/Pasted image 20230812094118.png" alt="" style="object-fit: scale-down">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# What is in the course ?
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Syllabus contents
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="transform: rotate(28deg); position: absolute; left: 0%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="images/umbrella.png" alt="" style="width: 800px; object-fit: fill">
+
+</div>
+<div class="" style="position: absolute; left: 0%; top: 28%; height: 90%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+# Job Opportunities <!-- .element: style="color: white; text-shadow: 0 0 5px #ff0000, 0 0 8px #fa0" -->
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="logo_hover" style="position: absolute; left: 35%; top: 15%; height: 25%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" id="govt">
+
+## Government Sector
+</div>
+
+<div class="tri_hover" style="position: absolute; left: 5%; top: 60%; height: 25%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Private Sector <!-- .element: style="color: #0f0" -->
+</div>
+
+<div class="sec_hover" style="position: absolute; left: 65%; top: 60%; height: 25%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+## Self Employment <!-- .element: style="color: #26f7fd" -->
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Cybersecurity Analyst
+- Security Engineer
+- Information Security Manager
+- Chief Information Security Officer (CISO)
+- Security Architect
+- Penetration Tester
+- Forensic Analyst
+- Incident Response Specialist
+- Security Consultant
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Is this course for you ?
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 900px; width: 1600px; min-height: 900px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# ? <!-- .element: style="font-size: 20rem" -->
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+	      RevealPointer,
+		  RevealChalkboard, 
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
+			]
+		},
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1600,"height":900,"margin":0.04,"controls":true,"progress":true,"slideNumber":false,"transition":"fade","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
